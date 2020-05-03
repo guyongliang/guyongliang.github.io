@@ -1,7 +1,7 @@
 ---
-layout: default
-title: 我的第二篇技术博客
+layout: post
+title: "Hank Quinlan, Horrible Cop, Launches Site"
+date: 2014-04-30
 ---
-<div class="blurb">
-	<p>我的第二篇技术博客</p>
-</div><!-- /.blurb -->
+
+Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
