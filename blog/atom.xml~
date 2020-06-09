@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>谷永亮的网络日志</title>
+	<title>GuYongliang's Blog</title>
 	<link href="http://guyongliang.github.io/blog/atom.xml" rel="self"/>
 	<link href="http://guyongliang.github.io/blog"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
