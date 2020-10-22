@@ -1,0 +1,89 @@
+I"�<h2 id="spring框架详解">Spring框架详解</h2>
+
+<h4 id="30-高级装配">3.0 高级装配</h4>
+
+<h4 id="31-profile注解">3.1 @Profile注解</h4>
+<ul>
+  <li>Spring3.1只支持在类级别上添加@Profile注解，Spring3.2支持在方法上添加@Profile</li>
+  <li>
+    <xml>配置文件内可以通过<beans profile="dev">指定
+激活Profile的方式：
+</beans></xml>
+    <ul>
+      <li>作为DispatcherServlet初始化参数</li>
+      <li>作为Web应用的上下文参数</li>
+      <li>作为JNDI条目</li>
+      <li>作为环境变量</li>
+      <li>作为JVM的系统属性</li>
+      <li>在集成测试上，使用@ActiveProfiles注解设置
+查找策略，spring.profile.active &gt; spring.profile.defaule,如果都没设置，则加载未设置profile的配置</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="32-conditionalxxxclass">3.2 @Conditional(xxx.class)</h4>
+<p>xxx类实现了Condition接口，重写了matches方法，返回true/false 来决定bean的创建条件</p>
+
+<h4 id="33-解决歧义性的注解">3.3 解决歧义性的注解</h4>
+<p>@Primary 和 @Qualifier(“aaa”)
+对于多态注入问题，同一个引用对应多个bean的情况，使用上述注解可以解决</p>
+
+<h4 id="34-bean的作用域">3.4 bean的作用域</h4>
+<p>singleton单例：整个应用中只有一个bean的实例
+prototype：每次注入或者通过上下文获取，都会创建一个bean的实例
+session：在Web应用中，每个会话一个bean实例
+request：在Web应用中，每个请求一个bean实例</p>
+
+<p>@Scope：用于指定bean的作用域
+value:作用域类型
+proxyMode:</p>
+
+<ul>
+  <li>
+    <h4 id="作用域代理方式进行注入">作用域代理方式进行注入</h4>
+    <p>当一个单例依赖的对象是request或者session的bean，在单例bean在类应用上下文加载的时候创建，而request或session的对象当时并不存在，
+而是等到某个用户进入系统，创建了会话之后才创建实例，这是便需要作用域代理方式进行注入
+如果对象是接口，则指定proxyMode=ScopedProxyMode.INTERFACES,如果对象是类，则指定proxyMode=ScopedProxyMode.TARGET_CLASS</p>
+  </li>
+</ul>
+
+<h3 id="35-运行时值注入">3.5 运行时值注入</h3>
+<ul>
+  <li>加载文件：@PropertySource(“classpath:/xxx/yyy/app.properties”)
+    <ul>
+      <li>aaa = 123</li>
+      <li>bbb.ccc = abc
+文件中的内容将会加载到Environment对象中</li>
+    </ul>
+  </li>
+  <li>@AutoWired
+Environment env</li>
+  <li>env.getProperty(“aaa”) =&gt; 123</li>
+  <li>env.getProperty(“bbb.ccc”) =&gt; abc</li>
+</ul>
+
+<p>Environment方法：</p>
+<ul>
+  <li>getProperty(String key)</li>
+  <li>getProperty(String key, String defaultValue)</li>
+  <li>T getProperty(String key, Class<T> type)</T></li>
+  <li>T getProperty(String key, Class<T> type, T defaultValue)</T></li>
+</ul>
+
+<p>使用@Value</p>
+<ul>
+  <li>配置PropertySourcesPlaceholderConfigurer用于解析占位符
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Bean</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="nc">PropertySourcesPlaceholderConfigurer</span> <span class="nf">placeholderConfigurer</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">PropertySourcesPlaceholderConfigurer</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>@Value(“${aaa.bbb}”)
+String str;</li>
+</ul>
+
+<p>SpEL
+#{}</p>
+
+:ET

@@ -1,0 +1,14 @@
+I"^<h2 id="gvim-windows系统的vim编辑器">gvim windows系统的vim编辑器</h2>
+
+<h4 id="vim-配置文件vim-安装目录_vimrc">vim 配置文件：/vim 安装目录/_vimrc</h4>
+<h4 id="配置gvim-编码解决乱码问题">配置gvim 编码，解决乱码问题</h4>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">"设置编码,解决乱码问题</span>
+<span class="k">set</span> <span class="nb">encoding</span><span class="p">=</span>utf<span class="m">-8</span> 
+<span class="k">set</span> <span class="nb">langmenu</span><span class="p">=</span>zh_CN<span class="p">.</span>UTF<span class="m">-8</span> 
+<span class="k">language</span> message zh_CN<span class="p">.</span>UTF<span class="m">-8</span>
+<span class="k">source</span> $VIMRUNTIME/delmenu<span class="p">.</span><span class="k">vim</span> "仅在windows的Gvim使用
+<span class="k">source</span> $VIMRUNTIME/menu<span class="p">.</span><span class="k">vim</span> "仅在windows的Gvim使用
+<span class="k">set</span> <span class="nb">fileencodings</span><span class="p">=</span>utf<span class="m">-8</span><span class="p">,</span>gb2312<span class="p">,</span>gbk<span class="p">,</span>gb18030
+<span class="k">set</span> <span class="nb">termencoding</span><span class="p">=</span>utf<span class="m">-8</span>
+</code></pre></div></div>
+:ET

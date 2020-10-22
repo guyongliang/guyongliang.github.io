@@ -1,0 +1,121 @@
+I"�<h2 id="git基础">git基础</h2>
+
+<ul>
+  <li>1.git config
+    <ul>
+      <li>–local:  仓库级配置文0件：该文件位于当前仓库下，路径.git/，文件名为.gitconfig</li>
+      <li>–global: 全局配置文件：C:\Users\zuoyu.ht，文件名为.gitconfig</li>
+      <li>–system: 系统级配置文件：本地git的安装目录下，以左御的git安装路径为例：D:\Program Files\Git\etc，文件名为：gitconfig</li>
+    </ul>
+  </li>
+  <li>2.git config命令查看配置文件
+    <ul>
+      <li>命令参数 –list, 简写 -l</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>格式：git config [–local</td>
+              <td>–global</td>
+              <td>–system] -l</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>查看仓库级的config，即.git/.config，命令：git config –local -l</li>
+          <li>查看全局级的config，即C:\Users\zuoyu.ht.gitconfig，命令：git config –global -l</li>
+          <li>查看系统级的config，即D:\Program Files\Git\etc\gitconfig，命令：git config –system -l</li>
+          <li>查看当前生效的配置，命令：git config -l，这个时候会显示最终三个配置文件计算后的配置信息</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ol>
+      <li>使用git config命令编辑配置文件
+        <ul>
+          <li>命令参数 –edit, 简写 -e</li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>格式：git config [–local</td>
+                  <td>–global</td>
+                  <td>–system] -e</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+        <ul>
+          <li>查看仓库级的config，即.git/.config，命令：git config –local -e，与–list参数不同的是，git config -e默认是编辑仓库级的配置文件。</li>
+          <li>查看全局级的config，即C:\Users\zuoyu.ht.gitconfig，命令：git config –global -e</li>
+          <li>查看系统级的config，即D:\Program Files\Git\etc\gitconfig，命令：git config –system -e</li>
+          <li>执行这个命令的时候，git会用配置文件中设定的编辑器打开配置文件。</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>增加一个配置项
+        <ul>
+          <li>参数 –add</li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>格式: git config [–local</td>
+                  <td>–global</td>
+                  <td>–system] –add section.key value(默认是添加在local配置中)</td>
+                </tr>
+              </tbody>
+            </table>
+          </li>
+        </ul>
+        <ul>
+          <li>注意add后面的section,key,value一项都不能少，否则添加失败。比如我们执行：git config –add cat.name tom
+  然后查看local中的配置：注意增加一项配置而不赋值 git config –add cat.age，或者单单增加一个section,git config –add cat1，不会成功。</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>5.获取一个配置项
+    <ul>
+      <li>有时候，我们并不需要查看所有配置的值，而是查看某个配置项的值，怎么做呢？</li>
+      <li>命令参数 –get</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>格式：git config [–local</td>
+              <td>–global</td>
+              <td>–system] –get section.key(默认是获取local配置中内容)</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>我们先往global配置中写入一个cat.name=Tomcat的配置项，再使用git config –get cat.name看看得到的是什么</li>
+      <li>结果就是local中的cat.name=Tom，因此git config –get section.key 等价于git config –local –get section.key</li>
+      <li>如果获取一个section不存在的key值，不会返回任何值</li>
+      <li>如果获取一个不存在的section的key值，则会报错</li>
+    </ul>
+  </li>
+  <li>6.删除一个配置项
+    <ul>
+      <li>命令参数 –unset</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>格式：git config [–local</td>
+              <td>–global</td>
+              <td>–system] –unset section.key</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,14 @@
+I"�<h1 id="标题h1">标题H1</h1>
+
+<p><img src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" alt="Pandao editor.md" title="Pandao editor.md" /></p>
+
+<hr />
+
+<p><del>删除线</del>				<s>删除线（开启识别HTML标签时）</s></p>
+
+<p><em>斜体字</em>      <em>斜体字</em></p>
+
+<p><strong>粗体</strong>  <strong>粗体</strong></p>
+
+<p><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></p>
+:ET

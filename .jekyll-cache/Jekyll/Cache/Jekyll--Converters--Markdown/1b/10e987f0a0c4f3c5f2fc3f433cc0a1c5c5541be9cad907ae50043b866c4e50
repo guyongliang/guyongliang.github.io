@@ -1,0 +1,21 @@
+I"�<h2 id="1搭建个人博客">1.搭建个人博客</h2>
+<p><a href="http://jmcglone.com/guides/github-pages/">GitHub Page + Jekyll</a></p>
+
+<h3 id="what-is-github-page"><a href="#anchor1" id="anchor1">What is GitHub Page?</a></h3>
+<ul>
+  <li>GitHub Page免费托管在GitHub的github.io域（或用户选择的自定义域名上）。</li>
+</ul>
+
+<h4 id="github-page优势"><a href="#anchor2" id="anchor2">GitHub Page优势?</a></h4>
+<p>Jekyll免费在后台为GitHub Page提供支持。</p>
+
+<h4 id="what-is-jekyll"><a href="#anchor3" id="anchor3">What is Jekyll?</a></h4>
+<p>模板系统：帮助我们更好构建网站</p>
+
+<p>个人网站搭建：
+1.在GitHub新建公开仓库，命名要求：用户名.github.io（guyongliang.github.io）
+2.添加文件后，可通过 http://username.github.io 直接访问该项目</p>
+
+<p>参考教程：<a href="https://pages.github.com/">GitHub Page + Jekyll</a></p>
+
+:ET

@@ -1,0 +1,12 @@
+I"�<h2 id="git基础">git基础</h2>
+
+<ul>
+  <li>git config
+    <ul>
+      <li>–local</li>
+      <li>–global: 全局配置：C:\Users\zuoyu.ht，文件名为.gitconfig</li>
+      <li>–system</li>
+    </ul>
+  </li>
+</ul>
+:ET

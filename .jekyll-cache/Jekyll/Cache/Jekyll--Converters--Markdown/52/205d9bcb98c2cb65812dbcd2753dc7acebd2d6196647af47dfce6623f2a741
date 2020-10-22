@@ -1,0 +1,13 @@
+I"�<h2 id="git基础">git基础</h2>
+
+<ul>
+  <li>git config
+    <ul>
+      <li>–local:  仓库级配置文0件：该文件位于当前仓库下，路径.git/，文件名为.gitconfig</li>
+      <li>–global: 全局配置文件：C:\Users\zuoyu.ht，文件名为.gitconfig</li>
+      <li>–system: 系统级配置文件：本地git的安装目录下，以左御的git安装路径为例：D:\Program Files\Git\etc，文件名为：gitconfig</li>
+    </ul>
+  </li>
+</ul>
+
+:ET

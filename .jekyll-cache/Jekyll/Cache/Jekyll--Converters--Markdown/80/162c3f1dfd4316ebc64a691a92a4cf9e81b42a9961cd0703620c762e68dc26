@@ -1,0 +1,33 @@
+I"�<h2 id="git基础">git基础</h2>
+
+<ul>
+  <li>git config
+    <ul>
+      <li>–local:  仓库级配置文0件：该文件位于当前仓库下，路径.git/，文件名为.gitconfig</li>
+      <li>–global: 全局配置文件：C:\Users\zuoyu.ht，文件名为.gitconfig</li>
+      <li>–system: 系统级配置文件：本地git的安装目录下，以左御的git安装路径为例：D:\Program Files\Git\etc，文件名为：gitconfig</li>
+    </ul>
+  </li>
+  <li>用git config命令查看配置文件
+    <ul>
+      <li>命令参数 –list, 简写 -l</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>格式：git config [–local</td>
+              <td>–global</td>
+              <td>–system] -l</td>
+            </tr>
+          </tbody>
+        </table>
+        <ul>
+          <li>查看仓库级的config，即.git/.config，命令：git config –local -l</li>
+          <li>查看全局级的config，即C:\Users\zuoyu.ht.gitconfig，命令：git config –global -l</li>
+          <li>查看系统级的config，即D:\Program Files\Git\etc\gitconfig，命令：git config –system -l</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+:ET
