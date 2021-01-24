@@ -5,21 +5,17 @@
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
-			<nav class="nav">
-	    		<ul>
-	        		<li><a href="/blog">爱篮球的程序猿 | 博文列表</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-
-				{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:77900460@qq.com">邮箱</a></li>
-	        		<li><a href="https://github.com/guyongliang">github</a></li>
-				</ul>
-			</footer>
+			<div class="wrapper">
+				<a class="title fontStyle" href="/blog">爱篮球的程序猿 | 博文列表</a>
+				<div class="container">
+					<div class="middle">
+						{{ content }}
+					</div>
+				</div>
+				<footer class="footer">
+					<a class="fontStyle footerLeft" href="mailto:77900460@qq.com">邮箱</a>
+					<a class="fontStyle footerRight" href="https://github.com/guyongliang">github</a>
+				</footer>
+			</div>
 		</body>
 	</html>

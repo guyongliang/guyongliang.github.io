@@ -1,19 +1,8 @@
-body {
-    margin: 0;
-    padding: 2%;
+body,html {
+    margin:0;
+    height:100%;
     width: 100%;
-    background-image: url("../resource/index.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-nav ul, footer ul {
-    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
-    font-size: 20px;
-    width: 100%;
-    list-style: none;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
+    overflow: hidden;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -21,7 +10,6 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: white;
 }
 a:hover {
     text-decoration: underline;
@@ -30,28 +18,77 @@ h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
 footer {
     position: fixed;
     bottom: 0px;
-    width: 96%;
+    width: 100%;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
-}
-
 ul.posts li {
     list-style: none;
+    font-size: 20px;
+}
+.wrapper {
+    background-image: url("../resource/index.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height:90%;
+    width: 90%;
+    padding: 5%;
+}
+.container {
+    margin-top: 10px;
+    background-color: white;
+    padding: 10px 20px 0;
+    width: 60%;
+    height: 80%;
+    overflow: scroll;
+
 }
 
-.container {
-    height: 100%;
+.title {
+    font-size: 20px;
+    color: white;
+}
+
+.fontStyle {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    list-style: none;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+#container {
+    overflow: auto;
+    height: 160px;
+    width: 260px;
+}
+
+#container::-webkit-scrollbar {
+    border-width:1px;
+}
+
+.leftSpan {
+    font-size: 0.8em;
+    width: 100px;
+}
+
+.rightSpan {
+    font-size: 0.8em;
+    line-height: 20px;
+    color: #FF8C00;
+}
+.footer {
+    padding: 10px;
+}
+.footerLeft {
+    font-size: 1.2em;
+    color: white;
+}
+.footerRight {
+    font-size: 1.2em;
+    color: white;
+    margin-left: 30px;
 }
