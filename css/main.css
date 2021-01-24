@@ -1,12 +1,19 @@
 body {
-    margin: 60px auto;
-    width: 70%;
+    margin: 0;
+    padding: 2%;
+    width: 100%;
+    background-image: url("../resource/index.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 20px;
+    width: 100%;
     list-style: none;
     font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -14,7 +21,7 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: white;
 }
 a:hover {
     text-decoration: underline;
@@ -29,6 +36,9 @@ p {
     color: #333;
 }
 footer {
+    position: fixed;
+    bottom: 0px;
+    width: 96%;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
@@ -40,4 +50,8 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+}
+
+.container {
+    height: 100%;
 }
