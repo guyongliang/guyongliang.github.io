@@ -1,0 +1,6 @@
+Maven 属性
+
+maven里的modelVersion
+modelVersion 描述这个POM文件是遵从哪个版本的项目描述符
+
+modelVersion：指定了当前POM模型的版本，对于Maven2及Maven 3来说，它只能是4.0.0；
