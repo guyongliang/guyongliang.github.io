@@ -1,6 +1,15 @@
-Maven 属性
+Maven
 
-maven里的modelVersion
+1.Maven属性简介（properties）
+通过properties元素用户可以自定义一个或多个Maven属性，然后在POM的其他地方使用**${属性名}**的方式引用该属性。
+这种做法的最大意义在于消除重复和统一管理。
+
+<properties>
+	......
+</properties>
+
+
+2.maven里的modelVersion
 modelVersion 描述这个POM文件是遵从哪个版本的项目描述符
 
 modelVersion：指定了当前POM模型的版本，对于Maven2及Maven 3来说，它只能是4.0.0；
